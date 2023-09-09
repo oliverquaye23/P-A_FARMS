@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat",sans-serif;
+    /* border: red;
+    border-style: dashed; */
+}
+body{
+    background-color: #d3d3d3;
+}
+/* navabar section */
+header{
+    background-color: #24252a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 5%;
+}
+
+header img{
+    width: 50px;
+    height: 40px;
+}
+
+li, a, button{
+    font-weight: 500;
+    font-size: 15px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.nav__links{
+    list-style: none;
+}
+.nav__links li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav__links li a:hover{
+    color: #006400;
+}
+button{
+    padding: 8px 20px;
+    background-color:rgba(0, 100, 0, 1) ;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color:rgba(0, 100, 0, 0.7) ;
+}
+
+/* Front Banner */
+.front_banner{
+    background-image: url(/static/image4.jpeg);
+    background-size: 100% 270px;
+    background-repeat: no-repeat;
+    padding: 30px;
+}
+
+.banner_text{
+    margin-top: 50px;
+    color: #ffff;
+}
+p{
+    font-family: 'Montserrat:ital', sans-serif;
+}
+
+
