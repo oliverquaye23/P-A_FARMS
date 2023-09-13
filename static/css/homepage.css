@@ -6,11 +6,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat",sans-serif;
+    list-style: none;
+    text-decoration: none;
     /* border: red;
     border-style: dashed; */
 }
 body{
-    background-color: #d3d3d3;
+    background-color: #ffff;
 }
 /* navabar section */
 header{
@@ -64,6 +66,7 @@ button:hover{
     background-size: 100% 270px;
     background-repeat: no-repeat;
     padding: 30px;
+    margin-bottom: 10px;
 }
 
 .banner_text{
@@ -74,4 +77,24 @@ p{
     font-family: 'Montserrat:ital', sans-serif;
 }
 
+/* sidebar */
+.wrapper{
+    display: flex;
+}
+.sidebar{
+    position: fixed;
+    width: 200px;
+    height: 500px;
+    padding: 30px;
+    background: black;
+}
+.sidebar h2{
+    color: #ffff;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.sidebar ul li{
+    padding: 15px;
 
+}
