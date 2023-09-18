@@ -80,13 +80,17 @@ p{
 /* sidebar */
 .wrapper{
     display: flex;
+    flex-direction: row;
+    
 }
 .sidebar{
-    position: fixed;
+    
+    /* position: fixed; */
     width: 200px;
     height: 500px;
     padding: 30px;
     background: black;
+    margin-right: 30px;
 }
 .sidebar h2{
     color: #ffff;
@@ -97,4 +101,36 @@ p{
 .sidebar ul li{
     padding: 15px;
 
+}
+
+/* news */
+#news {
+    
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    height: 500px;
+    width: 700px;
+    border-radius: 15px;
+}
+
+h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #555;
+}
+
+p {
+    color: #777;
 }

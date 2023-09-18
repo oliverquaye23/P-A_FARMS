@@ -1,32 +1,27 @@
 from flask import Flask,render_template,request,redirect, url_for
+from newsapi import NewsApiClient
 import requests
 app = Flask(__name__)
 
-@app.route('/get_news',methods = ['GET'])
-def get_news():
-
-    api_url = 'https://newsapi.org/v2/top-headlines'
-    api_key = "6317386d1b9541aebcb2180a0c6fe67a"
-
-    headers = {
-        "Authorization": f"Bearer {api_key}"
-    }
-
-    response = requests.get(api_url,headers=headers)
-
-    if response.status_code == 200:
-        # The request was successful. You can access the API response data using response.json()
-        data = response.json()
-        print(data)
-    else:
-        # The request failed. Handle the error appropriately.
-        print(f"Request failed with status code {response.status_code}")
-
+# newsapi = NewsApiClient(api_key='6317386d1b9541aebcb2180a0c6fe67a')
+# top_headlines = newsapi.get_top_headlines(category='business')
+# @app.route('/')
+# def homepage():
+#     return render_template('hompage.html')
 
 @app.route('/')
-def homepage():
-    return render_template('hompage.html')
+def news():
+    response = requests.get('https://newsapi.org/v2/top-headlines?q=agriculture&apiKey=6317386d1b9541aebcb2180a0c6fe67a')
+    if response.status_code == 200:
+        # Parse the JSON response
+        news_data = response.json()
 
+        # Extract the articles from the response
+        articles = news_data.get('articles', [])
+
+        return render_template('hompage.html', articles=articles)
+    else:
+        return 'Error fetching news'
 
 if __name__ == '__main__':
     app.run(debug=True, host = '0.0.0.0')
