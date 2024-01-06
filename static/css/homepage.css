@@ -33,6 +33,7 @@ li, a, button{
     font-size: 15px;
     color: #edf0f1;
     text-decoration: none;
+    display: flex;
 }
 
 .nav__links{
@@ -44,9 +45,52 @@ li, a, button{
 }
 .nav__links li a{
     transition: all 0.3s ease 0s;
+    display: flex;
 }
 .nav__links li a:hover{
     color: #006400;
+}
+.nav__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav__item {
+    margin-right: 15px;
+    position: relative;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #ffff;
+    display: inline-block;
+    
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 20;
+}
+
+.nav__item:hover .dropdown {
+    display: block;
+}
+
+.dropdown__item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown__item:last-child {
+    border-bottom: none;
 }
 button{
     padding: 8px 20px;
@@ -102,7 +146,7 @@ p{
     
     /* position: fixed; */
     width: 200px;
-    height: 500px;
+    height: 400px;
     padding: 30px;
     background: black;
     margin-right: 30px;
@@ -253,10 +297,12 @@ p {
     letter-spacing: 1px;
 }
 .col1 a{
-    display: block;
+    display: flex;
+    margin-left: 20px;
     text-decoration: none;
     color: #efefef;
     margin-bottom: 10px;
+    
 }
 form input{
     width: 400px;

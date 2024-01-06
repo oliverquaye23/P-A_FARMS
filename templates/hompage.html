@@ -31,13 +31,22 @@
         <img class="logo" src="/static/logo.jpg" alt="">
         <nav>
             <ul class="nav__links">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="http://127.0.0.1:5500/templates/about.html">About</a></li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Products</a>
+                    <div class="dropdown">
+                        <div class="dropdown__item">Eggs</div>
+                        <div class="dropdown__item">Veggies </div>
+                        <div class="dropdown__item">Poultry </div>
+                    </div>
+                </li>
+                <li><a href="http://127.0.0.1:5500/templates/services.html">Services</a></li>
             </ul>
             
         </nav>
-        <a href="#"><button>contact</button></a>
+        <form action="/contact" method="post" role="form">
+                <button class="btn btn-outline-success" type="submit" style="margin-bottom: 10px;">Contact</button>
+        </form>
     </header>
 <!-- Front Banner -->
     <div class="front_banner">
@@ -60,11 +69,20 @@
             <div class="sidebar">
                 <h2>Categories</h2>
                 <Ul>
-                    <li><a href="#"> <i class="fa-solid fa-layer-group"> </i><span>Product catalogue</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-users-line"> </i><span>Staff Info</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-cubes-stacked"> </i><span>Services</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-comment-dots"> </i><span>Feedback</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-phone"> </i><span>Contact</span></a></li>
+                    <li class="nav__item">
+                        <a href="#"><i class="fa-solid fa-layer-group"></i><span>Products</span></a>
+                        <div class="dropdown" style="background-color: white;">
+                            <div class="dropdown__item" style="color: black;">Eggs</div>
+                            <div class="dropdown__item" style="color: black;">Veggies </div>
+                            <div class="dropdown__item" style="color: black;">Poultry </div>
+                        </div>
+                    </li>
+                    <!-- <li><a href="#"> <i class="fa-solid fa-layer-group"> </i><span>Product catalogue</span></a></li> -->
+                    <!-- <li><a href="#"><i class="fa-solid fa-users-line"> </i><span>Staff Info</span></a></li> -->
+                    <li><a href="http://127.0.0.1:5500/templates/contact.html"><i class="fa-solid fa-cubes-stacked"> </i><span>Services</span></a></li>
+                    <!-- <li><a href="#"><i class="fa-solid fa-comment-dots"> </i><span>Feedback</span></a></li> -->
+                    <li><li><a href="http://127.0.0.1:5500/templates/contact.html"><i class="fas fa-phone"></i><span>Contact</span></a></li>
+                </li>
                 </Ul>
             </div>
 
@@ -75,7 +93,7 @@
                     <div class="slider">
                         <img id="slide-1" src="/static/veggies.jpg" alt="An image of vegetable fruits">
                         <img id="slide-2" src="/static/meat.jpg" alt="An image of vegetable fruits">
-                        <img id="slide-3" src="/static/cereals.jpg" alt="An image of vegetable fruits">
+                        <img id="slide-3" src="/static/eggs.jpg" alt="An image of vegetable fruits">
                     </div>
 
                     <div class="slider-nav">
@@ -143,9 +161,16 @@
     <div class="footer">
         <div class="col1">
             <h3>P&A FARMS</h3>
-            <a href="#">About</a>
-            <a href="#">Products</a>
-            <a href="#">Contact</a>
+            <a href="http://127.0.0.1:5500/templates/about.html">About</a>
+            <li class="nav__item">
+                <a  href="#">Products</a>
+                <div class="dropdown" style="background-color: white;">
+                    <div class="dropdown__item" style="color: black;">Eggs</div>
+                    <div class="dropdown__item" style="color: black;">Veggies </div>
+                    <div class="dropdown__item" style="color: black;">Poultry </div>
+                </div>
+            </li>
+            <a href="http://127.0.0.1:5500/templates/contact.html">Contact</a>
         </div>
         <div class="col2">
             <h3>FEEDBACKS</h3>

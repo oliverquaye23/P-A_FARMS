@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .service {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+        }
+
+        .service__title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+            margin-left: 10px;
+        }
+
+        .service__description {
+            color: #555;
+            margin-left: 10px;
+        }
+
+        .service__image {
+            width: 350px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .group{
+            display: flex;
+            flex-direction:column;
+        }
+    </style>
+</head>
+<body>
+    <h2>Our Services</h2>
+
+    <div class="service">
+        <img src="/static/image2.jpg" alt="Poultry" class="service__image">
+        <div class="group">
+            <div class="service__title">Poultry Farming</div>
+          <div class="service__description">
+            We specialize in raising healthy and high-quality poultry. Our farm is equipped with modern facilities to ensure the well-being of our birds.
+          </div>
+        </div>
+    </div>
+
+    <div class="service">
+        <img src="/static/eggs.jpg" alt="Egg Production" class="service__image">
+        <div class="group">
+            <div class="service__title">Egg Production</div>
+        <div class="service__description">
+            Our farm produces fresh and nutritious eggs. We prioritize the health and nutrition of our hens to provide you with the best quality eggs.
+        </div>
+        </div>
+    </div>
+
+    <div class="service">
+        <img src="/static/veggies.jpg" alt="Vegetable Production" class="service__image">
+        <div class="group">
+            <div class="service__title">Vegetable Production</div>
+        <div class="service__description">
+            In addition to poultry and eggs, we cultivate a variety of fresh and organic vegetables. Our commitment is to deliver farm-fresh produce to your table.
+        </div>
+        </div>
+    </div>
+</body>
+</html>
